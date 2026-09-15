@@ -1,24 +1,113 @@
+# ==========================================================
 # Python
+# ==========================================================
+
+.venv/
+venv/
+env/
+ENV/
+
 __pycache__/
 *.py[cod]
+*$py.class
 
-# Virtual environment
-.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
-# YOLO / experiment outputs
-runs/
-results/
+*.egg-info/
+dist/
+build/
+
+
+# ==========================================================
+# Computer Vision / YOLO
+# ==========================================================
 
 # Large datasets
-datasets/
+Computer Vision/datasets/
+Computer Vision/human_dataset/
 
-# Model weights
-*.pt
-*.onnx
+# Training/output runs
+Computer Vision/runs/
 
-# VS Code
+# Trained model weights
+Computer Vision/weights/
+Computer Vision/*.pt
+Computer Vision/*.pth
+Computer Vision/*.onnx
+Computer Vision/*.engine
+
+# Dataset/archive files
+Computer Vision/*.zip
+
+
+# ==========================================================
+# IDE
+# ==========================================================
+
 .vscode/
+.idea/
 
-# OS files
+*.code-workspace
+
+
+# ==========================================================
+# Arduino
+# ==========================================================
+
+# Arduino build artifacts
+*.elf
+*.bin
+*.hex
+*.map
+
+arduino_build*/
+arduino_cache*/
+
+
+# ==========================================================
+# OS junk
+# ==========================================================
+
 .DS_Store
 Thumbs.db
+Desktop.ini
+
+
+# ==========================================================
+# Logs / temporary files
+# ==========================================================
+
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+
+# ==========================================================
+# Secrets
+# ==========================================================
+
+.env
+.env.*
+!.env.example
+secrets.*
+credentials.*
+config.local.*
+
+
+# ==========================================================
+# Generated media / outputs
+# ==========================================================
+
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+output/
+outputs/
+predictions/
